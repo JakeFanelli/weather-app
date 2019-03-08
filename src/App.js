@@ -1,10 +1,26 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
 import "./App.css";
+import SearchBox from "./components/SearchBox";
+import { Container, Row, Col } from "reactstrap";
+import ResultBox from "./components/ResultBox";
 
 class App extends Component {
   render() {
-    return <p>hidp</p>;
+    return (
+      <Container>
+        <Row>
+          <h1>Weather</h1>
+        </Row>
+        <Row>
+          <Col>
+            <SearchBox />
+          </Col>
+          <Col>
+            <ResultBox />
+          </Col>
+        </Row>
+      </Container>
+    );
   }
 }
 
