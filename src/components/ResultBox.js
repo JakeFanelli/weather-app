@@ -1,20 +1,35 @@
 import React, { Component } from "react";
-import Secrets from "./Secrets";
-const endpoint =
-  "http://api.openweathermap.org/data/2.5/find?q=New+York,us&units=imperial&APPID=";
-const endpointKey = endpoint + Secrets.apiKey;
-const dataArr = [];
+import {
+  Container,
+  Row,
+  Card,
+  CardImg,
+  CardBody,
+  CardTitle,
+  CardSubtitle
+} from "reactstrap";
 class ResultBox extends Component {
-  componentDidMount() {
-    fetch(endpointKey)
-      .then(blob => blob.json())
-      .then(data => dataArr.push(data));
-    console.log(dataArr);
-  }
-
   render() {
-    console.log("butt");
-    return <div />;
+    if (this.props.weatherData) {
+      return null;
+    } else {
+      return (
+        <Container>
+          <Row>
+            <Card>
+              <CardImg
+                src="https://placeholdit.imgix.net/~text?txtsize=33&txt=poop"
+                alt="Card image cap"
+              />
+              <CardBody>
+                <CardTitle>Date:</CardTitle>
+                <CardSubtitle>Temperature:</CardSubtitle>
+              </CardBody>
+            </Card>
+          </Row>
+        </Container>
+      );
+    }
   }
 }
 export default ResultBox;
