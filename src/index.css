@@ -35,6 +35,13 @@ code {
   background-color: #000000;
   text-align: left;
 }
+.cardTitle {
+  text-align: center;
+  font-weight: bold;
+}
+.lastTitle {
+  margin-bottom: 1em;
+}
 body {
   background: #000000;
 }
@@ -53,4 +60,8 @@ body {
 }
 .form-group {
   text-align: left;
+}
+.column {
+  margin: 0 auto;
+  margin-bottom: 2em;
 }

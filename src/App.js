@@ -22,7 +22,6 @@ class App extends Component {
 
   updateWeatherData = e => {
     e.preventDefault();
-    console.log(this.state.cityCode);
     const endpoint = `${Secrets.baseUrl}${this.state.cityCode},${
       this.state.countryCode
     }${Secrets.baseUrl2}`;
