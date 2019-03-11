@@ -26,8 +26,17 @@ class App extends Component {
       this.state.countryCode
     }${Secrets.baseUrl2}`;
     fetch(endpoint)
-      .then(response => response.json())
-      .then(weatherData => this.setState({ weatherData }));
+      .then(response => {
+        if (response.ok) {
+          return response.json();
+        } else {
+          throw new Error(
+            "Issues searching this location, please try again later."
+          );
+        }
+      })
+      .then(weatherData => this.setState({ weatherData }))
+      .catch(error => alert(error));
   };
 
   render() {

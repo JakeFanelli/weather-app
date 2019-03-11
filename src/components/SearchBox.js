@@ -14,7 +14,7 @@ class SearchBox extends Component {
             ref={this.input}
             id="cityCode"
             className="search"
-            placeholder="Austin, Buston, Seattle..."
+            placeholder="Austin, Boston, Seattle..."
             value={this.props.cityCode}
             onChange={this.props.onChangeCity}
           />
