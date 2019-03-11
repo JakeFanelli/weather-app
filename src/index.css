@@ -35,6 +35,10 @@ code {
   background-color: #000000;
   text-align: left;
 }
+.card-img {
+  width: 70%;
+  margin: 0 auto;
+}
 .cardTitle {
   text-align: center;
   font-weight: bold;
